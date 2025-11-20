@@ -18,46 +18,16 @@ const generateButton = document.getElementById('generate-btn');
 generateButton.addEventListener('click', function(){
     
     
-    if (selectButton.value == 12) {
+    let passwordLength = Number(selectButton.value);
     
     let password = '';
         
-      for (let i = 0; i < 12; i++) {
+for (let i = 0; i < passwordLength; i++) {
             
     randomIndex = Math.floor(Math.random() * character.length);
     
     password += character[randomIndex];
     
     display.value = password;
-    
-            
-        }
-        
-    }else if (selectButton.value == 8) {
-        
-        let password = '';
-        
-      for (let i = 0; i < 8; i++) {
-            
-    randomIndex = Math.floor(Math.random() * character.length);
-    
-    password += character[randomIndex];
-    
-    display.value = password;
-    
-            
-        }
-    }else {
-        
-      let password = '';
-        
-      for (let i = 0; i < 6; i++) {
-            
-    randomIndex = Math.floor(Math.random() * character.length);
-    
-    password += character[randomIndex];
-    
-    display.value = password;      
-        };
-    };
-    });
+     };
+     });
